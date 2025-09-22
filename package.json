@@ -1,0 +1,70 @@
+{
+  "name": "og-bot-complete",
+  "version": "1.0.0",
+  "description": "OG Bot - Complete Discord bot with REST API, Roblox verification, XP system, and advanced moderation features",
+  "main": "index.js",
+  "scripts": {
+    "start": "node api-server.js",
+    "dev": "nodemon api-server.js",
+    "bot": "node index.js",
+    "api": "node api-server.js",
+    "both": "concurrently \"npm run bot\" \"npm run api\"",
+    "dev-bot": "nodemon index.js",
+    "dev-api": "nodemon api-server.js",
+    "dev-both": "concurrently \"npm run dev-bot\" \"npm run dev-api\"",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "docs": "node generate-docs.js",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:stop": "pm2 stop all",
+    "pm2:restart": "pm2 restart all",
+    "pm2:logs": "pm2 logs",
+    "pm2:monit": "pm2 monit"
+  },
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "mongodb": "^6.3.0",
+    "axios": "^1.6.2",
+    "node-cron": "^3.0.3",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "concurrently": "^8.2.2",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "api",
+    "rest",
+    "roblox",
+    "verification",
+    "leveling",
+    "moderation",
+    "xp-system",
+    "warnings",
+    "mongodb"
+  ],
+  "author": "Rizal Afandi",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kxvc/og-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kxvc/og-bot"
+  },
+  "homepage": "https://github.com/kxvc/og-bot.git#readme"
+}
